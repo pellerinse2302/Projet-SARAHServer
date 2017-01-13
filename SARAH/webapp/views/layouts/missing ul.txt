@@ -1,0 +1,10 @@
+<% 
+            var feed = SARAH.getRSSFeed('http://encausse.wordpress.com/category/domotique/sarah/feed/')
+	          for(var i = 0 ; feed && i < 6 && i < feed.items.length ; i++){
+	            var item = feed.items[i];
+	        %>
+	        <li>
+	          <span class='glyphicon glyphicon-record'></span>
+	          <a href="<%= item.link %>"><%= item.title %></a>
+	        </li>
+	        <% } %>
